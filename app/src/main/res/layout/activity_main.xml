@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/activity_background"
+    android:id="@+id/coordinatorLayout"
+    tools:context=".JitsiVideoCallActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="top"
+            android:gravity="top"
+            android:background="@drawable/splash_bg"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="My Meet"
+                android:fontFamily="@font/poppins"
+                android:textStyle="bold"
+                android:textSize="@dimen/_16ssp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/color_white"/>
+
+        </LinearLayout>
+
+        <include layout="@layout/content_main"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        android:id="@+id/bottom_sheet_new_meet"
+        android:background="@android:color/white"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <TextView
+            android:id="@+id/share_meet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:padding="@dimen/_5sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:text="Share joining info"
+            android:textSize="@dimen/_14ssp"
+            app:drawableStartCompat="@drawable/ic_share"
+            app:drawableTint="@color/black" />
+
+        <TextView
+            android:id="@+id/start_meet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:padding="@dimen/_5sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:text="Start an instant meeting"
+            android:textSize="@dimen/_14ssp"
+            app:drawableStartCompat="@drawable/ic_meet"
+            app:drawableTint="@color/black" />
+
+        <TextView
+            android:id="@+id/close_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:fontFamily="@font/poppins_light"
+            android:padding="@dimen/_5sdp"
+            android:text="Close"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            app:drawableStartCompat="@drawable/ic_close"
+            app:drawableTint="@color/black" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:orientation="vertical"
+        app:behavior_hideable="true"
+        app:behavior_peekHeight="0dp"
+        android:id="@+id/bottom_sheet_join_meet"
+        android:background="@android:color/white"
+        app:layout_behavior="@string/bottom_sheet_behavior">
+
+        <TextView
+            android:id="@+id/back_meet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:text="Join a meeting"
+            android:textSize="@dimen/_14ssp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            app:drawableStartCompat="@drawable/ic_back"
+            app:drawableTint="@color/black"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_light"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:paddingStart="@dimen/_5sdp"
+            android:paddingEnd="@dimen/_5sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:text="Enter the code provided by the meeting organiser"
+            android:textSize="@dimen/_10ssp"
+            android:layout_marginBottom="@dimen/_5sdp" />
+
+        <EditText
+            android:id="@+id/edt_meet_code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@drawable/empty_button_bg"
+            android:layout_margin="@dimen/_5sdp"
+            android:hint="Enter room name; Example DYi-76hu-J7"
+            android:maxLength="11"
+            android:textColor="@color/app_label"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/_5sdp"
+            android:fontFamily="@font/poppins_light"
+            android:textSize="@dimen/_12ssp"/>
+
+        <TextView
+            android:id="@+id/start_new_meet"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="1"
+            android:background="@drawable/filled_button_bg"
+            android:layout_margin="@dimen/_5sdp"
+            android:text="New Meeting"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:fontFamily="@font/poppins_light"
+            android:textSize="@dimen/_12ssp"/>
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

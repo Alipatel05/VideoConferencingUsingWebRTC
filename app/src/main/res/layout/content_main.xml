@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/activity_background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        >
+
+        <TextView
+            android:id="@+id/new_meet_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="1"
+            android:background="@drawable/filled_button_bg"
+            android:layout_margin="@dimen/_5sdp"
+            android:text="New Meeting"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/color_white"
+            android:fontFamily="@font/poppins"
+            android:textSize="@dimen/_12ssp"/>
+
+        <TextView
+            android:id="@+id/join_meet_button"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="1"
+            android:background="@drawable/empty_button_bg"
+            android:layout_margin="@dimen/_5sdp"
+            android:text="Join Meeting"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:fontFamily="@font/poppins"
+            android:textSize="@dimen/_12ssp"/>
+
+    </LinearLayout>
+
+</LinearLayout>
